@@ -1,0 +1,24 @@
+name: swipe_cards_example
+description: An example app demonstrating the usage of the swipe_cards package.
+publish_to: "none" # This prevents it from being published to pub.dev
+
+version: 1.0.0
+
+environment:
+  sdk: ">=3.8.1 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.7.2
+  flutter_screenutil: ^5.9.3
+  swipe_cards:
+    path: ../ # 👈 Path to your main package folder
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
