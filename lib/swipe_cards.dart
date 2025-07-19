@@ -1,5 +1,3 @@
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export './src/shuffle_card_animation.dart';
+export './src/shuffle_card_controller.dart';
+export './src/card_style.dart';

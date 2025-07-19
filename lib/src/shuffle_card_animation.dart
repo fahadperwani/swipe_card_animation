@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'shuffle_card_controller.dart';
 
@@ -28,54 +29,57 @@ class ShuffleCardAnimation extends StatelessWidget {
               .entries
               .map((entry) {
                 final cardOrder = controller.cardOrder;
-                final int cardIndex = entry.key;
-                final startIndex = controller.startIndex.value;
-                final actualIndex = (startIndex + cardIndex) % cardOrder.length;
-                final int cardValue =
-                    cardOrder[(startIndex + cardIndex) % cardOrder.length];
+                final index = controller.currentCardIndex.value;
+                final int cardIndex = (entry.key + index) % cardOrder.length;
+                final int cardValue = cardOrder[cardIndex];
+
+                if (cardValue == -1) return const SizedBox.shrink();
+
                 final offset = controller.currentOffset.value;
 
-                bool isTopCard =
-                    actualIndex == (startIndex + 1) % cardOrder.length;
                 double left = 0;
-
-                if (isTopCard) left = controller.currentOffset.value;
-                if (cardValue == -1) {
-                  left = (cardIndex == 0)
-                      ? -1 * controller.currentOffset.value
-                      : controller.currentOffset.value;
+                if (cardIndex == index) left = offset;
+                if (cardIndex == (index + 1) % cardOrder.length) {
+                  if (offset < 0) {
+                    left = (offset - 5.w) * -1;
+                  } else {
+                    left = 5.w;
+                  }
                 }
-                if (offset < 0 &&
-                    ((startIndex + 2) % cardOrder.length) == actualIndex) {
-                  left = -1 * controller.currentOffset.value;
-                }
-                if (offset > 0 &&
-                    ((startIndex + 3) % cardOrder.length) == actualIndex) {
-                  left = -1 * controller.currentOffset.value;
+                if (cardIndex ==
+                    (index - 2 + cardOrder.length) % cardOrder.length) {
+                  if (offset > 0) {
+                    left = (offset + 5.w) * -1;
+                  } else {
+                    left = -5.w;
+                  }
                 }
 
                 return AnimatedPositioned(
+                  key: ValueKey(cardValue),
                   top: 50,
                   duration: const Duration(milliseconds: 200),
                   left: left,
-                  child: Opacity(
-                    opacity: cardValue == -1 ? 0 : 1,
-                    child: Transform.translate(
-                      offset: Offset(left, 0),
-                      child: GestureDetector(
-                        onHorizontalDragUpdate: (details) {
-                          controller.currentOffset.value += details.delta.dx;
-                        },
-                        onHorizontalDragEnd: (details) {
-                          final offset = controller.currentOffset.value;
-                          if (offset > 100) controller.cycleCardsRight();
-                          if (offset < -100) {
-                            controller.cycleCardsLeft();
-                          } else {
-                            controller.animateBack();
-                          }
-                        },
-                        child: buildCard(cardValue, cardIndex),
+                  child: Transform.translate(
+                    key: ValueKey(cardValue),
+                    offset: Offset(left, 0),
+                    child: GestureDetector(
+                      onHorizontalDragUpdate: (details) {
+                        controller.currentOffset.value += details.delta.dx;
+                      },
+                      onHorizontalDragEnd: (details) {
+                        final offset = controller.currentOffset.value;
+                        if (offset > 100) controller.cycleCardsRight();
+                        if (offset < -100) {
+                          controller.cycleCardsLeft();
+                        } else {
+                          controller.animateBack();
+                        }
+                      },
+                      child: buildCard(
+                        cardValue,
+                        cardIndex,
+                        (cardIndex - index) == 0,
                       ),
                     ),
                   ),
@@ -89,34 +93,16 @@ class ShuffleCardAnimation extends StatelessWidget {
     );
   }
 
-  Widget buildCard(int value, int index) {
-    final cardOrder = controller.cardOrder;
-    final startIndex = controller.startIndex.value;
-    final actualIndex = (startIndex + index) % cardOrder.length;
-    bool isTopCard = actualIndex == (startIndex + 1) % cardOrder.length;
-    bool? isLeftSwipe = controller.isLeftSwipe.value;
-    if (isLeftSwipe != null && isLeftSwipe) {
-      isTopCard = actualIndex == (startIndex + 2) % cardOrder.length;
-    }
-    if (isLeftSwipe != null && !isLeftSwipe) {
-      isTopCard = actualIndex == startIndex;
-    }
-
+  Widget buildCard(int value, int index, bool isTopCard) {
     return AnimatedContainer(
       key: ValueKey(value),
-      duration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 1000),
       curve: Curves.easeOut,
       width: cardWidth,
       height: cardHeight,
       margin: EdgeInsets.symmetric(horizontal: horizontalOffset),
       decoration: BoxDecoration(
-        color:
-            isTopCard ||
-                (value == -1 &&
-                    (actualIndex != startIndex ||
-                        controller.currentOffset.value == 0))
-            ? Color(0xFFFFFFFF)
-            : Color(0xFFE0E0E0),
+        color: isTopCard ? Color(0xFFFFFFFF) : Color(0xFFE0E0E0),
         borderRadius: BorderRadius.circular(12),
         boxShadow: const [
           BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 4)),
