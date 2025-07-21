@@ -1,39 +1,111 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Swipe Cards Package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The Swipe Cards package provides customizable card animations for Flutter applications. It includes two types of animations: Shuffle Card Animation and Stack Card Animation. This package allows developers to easily integrate card swiping functionality into their apps with minimal setup.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Shuffle Card Animation**: Allows cards to be swiped in both directions (left and right).
+- **Stack Card Animation**: Allows cards to be swiped forward only.
+- **Customizable Card Styles**: Define card height, width, colors, and border radius.
+- **Easy Integration**: Simple API to use the animations in your Flutter app.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add the following dependency to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  swipe_cards: ^1.0.0
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+### Import the Package
 
 ```dart
-const like = 'sample';
+import 'package:swipe_cards/swipe_cards.dart';
 ```
 
-## Additional information
+### Example of Shuffle Card Animation
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+ShuffleCardAnimation(
+  cardStyle: CardStyle(
+    height: 300,
+    width: 200,
+    activeColor: Colors.blue,
+    inactiveColor: Colors.grey,
+    borderRadius: 15,
+  ),
+  totalCards: 10,
+  builder: (context, index) {
+    return Container(
+      alignment: Alignment.center,
+      child: Text('Card $index'),
+    );
+  },
+);
+```
+
+### Example of Stack Card Animation
+
+```dart
+StackCardAnimation(
+  cardStyle: CardStyle(
+    height: 300,
+    width: 200,
+    activeColor: Colors.green,
+    inactiveColor: Colors.grey,
+    borderRadius: 15,
+  ),
+  totalCards: 10,
+  builder: (context, index) {
+    return Container(
+      alignment: Alignment.center,
+      child: Text('Card $index'),
+    );
+  },
+);
+```
+
+## Central Card Animation
+
+The `CentralCardAnimation` class provides a unified interface for both Shuffle and Stack animations. You can specify the type of animation and its direction.
+
+### Example
+
+```dart
+CentralCardAnimation(
+  animationType: AnimationType.shuffle, // or AnimationType.stack
+  cardStyle: CardStyle(
+    height: 300,
+    width: 200,
+    activeColor: Colors.red,
+    inactiveColor: Colors.grey,
+    borderRadius: 15,
+  ),
+  totalCards: 10,
+  builder: (context, index) {
+    return Container(
+      alignment: Alignment.center,
+      child: Text('Card $index'),
+    );
+  },
+);
+```
+
+## Adding Video Content
+
+To enhance your package documentation, you can include a video demonstration. You can link to a video hosted on platforms like YouTube or Vimeo. Use the following Markdown syntax to embed a video link:
+
+```markdown
+[Watch the demo video](https://www.youtube.com/watch?v=your_video_id)
+```
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
