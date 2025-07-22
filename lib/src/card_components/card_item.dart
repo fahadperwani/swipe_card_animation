@@ -10,7 +10,7 @@ class CardItem extends StatelessWidget {
   final bool isTopCard;
 
   const CardItem({
-    Key? key,
+    super.key,
     required this.cardHeight,
     required this.cardWidth,
     required this.activeColor,
@@ -18,7 +18,7 @@ class CardItem extends StatelessWidget {
     required this.borderRadius,
     required this.builder,
     required this.isTopCard,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

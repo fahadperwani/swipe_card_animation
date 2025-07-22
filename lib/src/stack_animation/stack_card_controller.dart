@@ -8,7 +8,6 @@ class StackCardController extends GetxController {
 
   void setTotalCards(int totalCards) {
     cardOrder = List.generate(totalCards, (index) => index);
-    print("Card order: $cardOrder");
   }
 
   void cycleCardsRight() {

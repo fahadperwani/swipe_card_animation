@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:swipe_cards/swipe_cards.dart';
-import 'card_animation_type.dart';
 
 /// A universal widget to display card animations.
 ///
@@ -13,12 +12,12 @@ class CardAnimation extends StatelessWidget {
   final Widget Function(BuildContext, int) builder;
 
   const CardAnimation({
-    Key? key,
+    super.key,
     required this.animationType,
     required this.cardStyle,
     required this.totalCards,
     required this.builder,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

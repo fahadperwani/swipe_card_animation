@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:swipe_cards/swipe_cards.dart';
-import '../card_components/card_item.dart'; // Import the CardItem class
 
 class ShuffleCardAnimation extends StatelessWidget {
   final CardStyle cardStyle;

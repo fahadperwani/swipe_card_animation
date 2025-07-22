@@ -20,7 +20,6 @@ class StackCardAnimation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double top = (100 / totalCards) > 10 ? 10 : (100 / totalCards);
     return SizedBox(
       height: cardStyle.height + 100,
       width: double.infinity,
@@ -83,12 +82,13 @@ class StackCardAnimation extends StatelessWidget {
                               controller.currentOffset.value += d.delta.dx,
                           onHorizontalDragEnd: (d) {
                             final o = controller.currentOffset.value;
-                            if (o > 100)
+                            if (o > 100) {
                               controller.cycleCardsRight();
-                            else if (o < -100)
+                            } else if (o < -100) {
                               controller.cycleCardsLeft();
-                            else
+                            } else {
                               controller.animateBack();
+                            }
                           },
                           child: CardItem(
                             cardHeight: cardStyle.height,

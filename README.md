@@ -1,17 +1,17 @@
 # Swipe Cards Package
 
-The Swipe Cards package provides customizable card animations for Flutter applications. It includes two types of animations: Shuffle Card Animation and Stack Card Animation. This package allows developers to easily integrate card swiping functionality into their apps with minimal setup.
+The **Swipe Cards** package provides customizable card animations for Flutter applications. It includes two types of animations: **Shuffle Card Animation** and **Stack Card Animation**. This package allows developers to easily integrate card swiping functionality into their apps with minimal setup.
 
 ## Features
 
 - **Shuffle Card Animation**: Allows cards to be swiped in both directions (left and right).
-- **Stack Card Animation**: Allows cards to be swiped forward only.
-- **Customizable Card Styles**: Define card height, width, colors, and border radius.
+- **Stack Card Animation**: Allows cards to be swiped forward only (left swipe does nothing).
+- **Customizable Card Styles**: Define card height, width, colors, and border radius to suit your app's design.
 - **Easy Integration**: Simple API to use the animations in your Flutter app.
 
 ## Installation
 
-Add the following dependency to your `pubspec.yaml` file:
+To install the Swipe Cards package, add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
@@ -70,12 +70,12 @@ StackCardAnimation(
 
 ## Central Card Animation
 
-The `CentralCardAnimation` class provides a unified interface for both Shuffle and Stack animations. You can specify the type of animation and its direction.
+The `CardAnimation` class provides a unified interface for both **Shuffle** and **Stack** animations. You can specify the type of animation and its direction.
 
 ### Example
 
 ```dart
-CentralCardAnimation(
+CardAnimation(
   animationType: AnimationType.shuffle, // or AnimationType.stack
   cardStyle: CardStyle(
     height: 300,
@@ -94,13 +94,51 @@ CentralCardAnimation(
 );
 ```
 
+## Running Examples
+
+The **examples** for both `ShuffleCardAnimation` and `StackCardAnimation` are located in the `example/` folder. To run these examples:
+
+1. Navigate to the `example/` directory:
+
+   ```bash
+   cd example
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   flutter pub get
+   ```
+
+3. Run any example app:
+   ```bash
+   flutter run example1
+   flutter run example2
+   flutter run example3
+   flutter run example4
+   flutter run example5
+   ```
+
+This will launch a Flutter app that demonstrates the card animations.
+
 ## Adding Video Content
 
-To enhance your package documentation, you can include a video demonstration. You can link to a video hosted on platforms like YouTube or Vimeo. Use the following Markdown syntax to embed a video link:
+Here are some example GIFs demonstrating the card animations in action:
 
-```markdown
-[Watch the demo video](https://www.youtube.com/watch?v=your_video_id)
-```
+![Example 1: Shuffle Animation](./assets/example1.gif)  
+_Shuffle animation showing cards swiping left and right._
+
+![Example 2: Stack Animation](./assets/example2.gif)  
+_Stack animation showing only forward card swipes._
+
+![Example 3: Customizable Cards](./assets/example3.gif)  
+_Example of customizing card colors and size._
+
+![Example 4: Card Scaling](./assets/example4.gif)  
+_Demonstrates the scaling of cards as they are swiped._
+
+![Example 5: Central Card Animation](./assets/example5.gif)  
+_The central card animation that integrates both Shuffle and Stack types._
 
 ## Contributing
 

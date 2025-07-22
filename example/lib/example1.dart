@@ -76,8 +76,9 @@ class ShuffleFeaturesApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(28),
                   boxShadow: [
                     BoxShadow(
-                      color: (feature['colors'] as List<Color>).last
-                          .withOpacity(0.25),
+                      color: (feature['colors'] as List<Color>).last.withAlpha(
+                        64,
+                      ),
                       blurRadius: 16,
                       offset: const Offset(0, 8),
                     ),
