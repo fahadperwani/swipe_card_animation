@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swipe_cards/swipe_cards.dart';
+import 'package:swipe_cards/swipe_card_animation.dart';
 
 void main() => runApp(const ShuffleFeaturesApp());
 

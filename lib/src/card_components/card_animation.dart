@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swipe_card_animation/swipe_cards.dart';
+import 'package:swipe_card_animation/swipe_card_animation.dart';
 
 /// A universal widget to display card animations.
 ///
