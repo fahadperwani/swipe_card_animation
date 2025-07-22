@@ -171,9 +171,10 @@ packages:
   swipe_card_animation:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      name: swipe_card_animation
+      sha256: a426a3fae9f19113e51dc38f41faf7768b4eccac9dfc3e93e1303d3cd937d543
+      url: "https://pub.dev"
+    source: hosted
     version: "1.0.0"
   term_glyph:
     dependency: transitive

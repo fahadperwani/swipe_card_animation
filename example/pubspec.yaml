@@ -14,7 +14,6 @@ dependencies:
   get: ^4.7.2
   flutter_screenutil: ^5.9.3
   swipe_card_animation:
-    path: ../ # 👈 Path to your main package folder
 
 dev_dependencies:
   flutter_test:
@@ -22,3 +21,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - ../assets/

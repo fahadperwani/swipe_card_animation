@@ -125,19 +125,19 @@ This will launch a Flutter app that demonstrates the card animations.
 
 Here are some example GIFs demonstrating the card animations in action:
 
-<img src="./assets/example1.gif" alt="Example 1: Shuffle Animation" height="400">
+<img src="https://raw.githubusercontent.com/fahadperwani/swipe_card_animation/main/assets/example1.gif" alt="Example 1: Shuffle Animation" height="400">
 <p><i>Shuffle animation showing cards swiping left and right.</i></p>
 
-<img src="./assets/example2.gif" alt="Example 2: Stack Animation" height="400">
+<img src="https://raw.githubusercontent.com/fahadperwani/swipe_card_animation/main/assets/example2.gif" alt="Example 2: Stack Animation" height="400">
 <p><i>Stack animation showing only forward card swipes.</i></p>
 
-<img src="./assets/example3.gif" alt="Example 3: Customizable Cards" height="400">
+<img src="https://raw.githubusercontent.com/fahadperwani/swipe_card_animation/main/assets/example3.gif" alt="Example 3: Customizable Cards" height="400">
 <p><i>Example of customizing card colors and size.</i></p>
 
-<img src="./assets/example4.gif" alt="Example 4: Card Scaling" height="400">
+<img src="https://raw.githubusercontent.com/fahadperwani/swipe_card_animation/main/assets/example4.gif" alt="Example 4: Card Scaling" height="400">
 <p><i>Demonstrates the scaling of cards as they are swiped.</i></p>
 
-<img src="./assets/example5.gif" alt="Example 5: Central Card Animation" height="400">
+<img src="https://raw.githubusercontent.com/fahadperwani/swipe_card_animation/main/assets/example5.gif" alt="Example 5: Central Card Animation" height="400">
 <p><i>The central card animation that integrates both Shuffle and Stack types.</i></p>
 
 ## Contributing
