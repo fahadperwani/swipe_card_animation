@@ -4,7 +4,7 @@ version: 1.0.0
 repository: https://github.com/fahadperwani/swipe_card_animation
 issue_tracker: https://github.com/fahadperwani/swipe_card_animation/issues
 documentation: https://github.com/fahadperwani/swipe_card_animation/README.md
-homepage:
+homepage: https://fahadperwani.github.io/portfolio/
 
 environment:
   sdk: ^3.8.1

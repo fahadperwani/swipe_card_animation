@@ -15,7 +15,7 @@ To install the Swipe Cards package, add the following dependency to your `pubspe
 
 ```yaml
 dependencies:
-  swipe_cards: ^1.0.0
+  swipe_card_animation: ^1.0.0
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ dependencies:
 ### Import the Package
 
 ```dart
-import 'package:swipe_cards/swipe_cards.dart';
+import 'package:swipe_card_animation/swipe_card_animation.dart';
 ```
 
 ### Example of Shuffle Card Animation

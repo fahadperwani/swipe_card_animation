@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "swipe_cards",
+            "name": "swipe_card_animation",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "swipe_cards (profile mode)",
+            "name": "swipe_card_animation (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "swipe_cards (release mode)",
+            "name": "swipe_card_animation (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
