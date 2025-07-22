@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:swipe_card_animation/swipe_cards.dart';
+import 'package:swipe_card_animation/swipe_card_animation.dart';
 
 class StackCardAnimation extends StatelessWidget {
   final CardStyle cardStyle;
