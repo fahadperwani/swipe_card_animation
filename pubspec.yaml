@@ -1,6 +1,6 @@
 name: swipe_card_animation
 description: "A Flutter package for swipe card animations."
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/fahadperwani/swipe_card_animation
 issue_tracker: https://github.com/fahadperwani/swipe_card_animation/issues
 documentation: https://github.com/fahadperwani/swipe_card_animation/README.md

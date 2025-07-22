@@ -8,3 +8,7 @@
 - Added `StackCardAnimation` for card swiping forward only.
 - Provided customizable card styles (height, width, colors, and border radius).
 - Added examples for both animation types.
+
+## [1.0.1] - 2025-07-21
+
+### Update documentation
