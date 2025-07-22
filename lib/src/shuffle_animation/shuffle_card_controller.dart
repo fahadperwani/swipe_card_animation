@@ -8,7 +8,6 @@ class ShuffleCardController extends GetxController {
 
   void setTotalCards(int totalCards) {
     cardOrder = List.generate(totalCards + 1, (index) => index);
-    print("Card order: $cardOrder");
   }
 
   void cycleCardsRight() {

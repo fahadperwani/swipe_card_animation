@@ -125,20 +125,20 @@ This will launch a Flutter app that demonstrates the card animations.
 
 Here are some example GIFs demonstrating the card animations in action:
 
-![Example 1: Shuffle Animation](./assets/example1.gif)  
-_Shuffle animation showing cards swiping left and right._
+<img src="./assets/example1.gif" alt="Example 1: Shuffle Animation" style="width:100%; max-width:300px;">
+<p><i>Shuffle animation showing cards swiping left and right.</i></p>
 
-![Example 2: Stack Animation](./assets/example2.gif)  
-_Stack animation showing only forward card swipes._
+<img src="./assets/example2.gif" alt="Example 2: Stack Animation" style="width:100%; max-width:300px;">
+<p><i>Stack animation showing only forward card swipes.</i></p>
 
-![Example 3: Customizable Cards](./assets/example3.gif)  
-_Example of customizing card colors and size._
+<img src="./assets/example3.gif" alt="Example 3: Customizable Cards" style="width:100%; max-width:300px;">
+<p><i>Example of customizing card colors and size.</i></p>
 
-![Example 4: Card Scaling](./assets/example4.gif)  
-_Demonstrates the scaling of cards as they are swiped._
+<img src="./assets/example4.gif" alt="Example 4: Card Scaling" style="width:100%; max-width:300px;">
+<p><i>Demonstrates the scaling of cards as they are swiped.</i></p>
 
-![Example 5: Central Card Animation](./assets/example5.gif)  
-_The central card animation that integrates both Shuffle and Stack types._
+<img src="./assets/example5.gif" alt="Example 5: Central Card Animation" style="width:100%; max-width:300px;">
+<p><i>The central card animation that integrates both Shuffle and Stack types.</i></p>
 
 ## Contributing
 

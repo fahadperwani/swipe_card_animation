@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:swipe_cards/swipe_cards.dart';
+import 'package:swipe_card_animation/swipe_cards.dart';
 
 class ShuffleCardAnimation extends StatelessWidget {
   final CardStyle cardStyle;
@@ -74,10 +74,11 @@ class ShuffleCardAnimation extends StatelessWidget {
                       onHorizontalDragEnd: (details) {
                         final offset = controller.currentOffset.value;
                         if (offset > 100) controller.cycleCardsRight();
-                        if (offset < -100)
+                        if (offset < -100) {
                           controller.cycleCardsLeft();
-                        else
+                        } else {
                           controller.animateBack();
+                        }
                       },
                       child: CardItem(
                         cardHeight: cardStyle.height,
