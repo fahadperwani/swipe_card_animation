@@ -1,5 +1,5 @@
-name: swipe_cards_example
-description: An example app demonstrating the usage of the swipe_cards package.
+name: swipe_card_animation_example
+description: An example app demonstrating the usage of the swipe_card_animation package.
 publish_to: "none" # This prevents it from being published to pub.dev
 
 version: 1.0.0
@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   get: ^4.7.2
   flutter_screenutil: ^5.9.3
-  swipe_cards:
+  swipe_card_animation:
     path: ../ # 👈 Path to your main package folder
 
 dev_dependencies:

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swipe_cards/swipe_card_animation.dart';
+import 'package:swipe_card_animation/swipe_card_animation.dart';
 
 void main() => runApp(const CentralStackAnimationApp());
 

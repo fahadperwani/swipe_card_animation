@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="swipe_cards_example"
+        android:label="swipe_card_animation_example"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
